@@ -8,9 +8,8 @@ function App() {
   const [newItem, setNewItem]= useState('');
    const[items, setItems] = useState([]);
 
-
-
  
+   
 
 
 function AddItem(){
@@ -19,6 +18,8 @@ function AddItem(){
     alert("Enter task...")
     return;
   }
+
+
  
   let item = {
     id: Math.floor(Math.random() * 10),
@@ -39,16 +40,34 @@ function deleteItem(id){
 
   return (
     <>
+  
      <div className="container">
+   <div className="todo-wrapper">
+    
+   <div className="Side-bar">
+      <ul>
+        <li>All</li>
+        <li>Groceries</li>
+        <li> College</li>
+        <li>Payments</li>
+      </ul>
+    </div>
+    <hr className='line' / >
      <div className="block">
+      
       <h1>All Tasks</h1>
-      <input onChange={ e => setNewItem(e.target.value)} value={newItem} type="text" placeholder='Add a new task insdie ‘All’ category'/>
-  <button className='button' onClick={()=> AddItem()}>Add</button>
+      <input className='input' onChange={ e => setNewItem(e.target.value)} value={newItem} type="text" placeholder='Add a new task insdie ‘All’ category'/>
+  <button id='button' onClick={()=> AddItem()}>Add</button>
     <div className="table">
       <ul>
         {items.map(item =>{
         return(
-          <li key={item.id}>{item.value} <button onClick={() => deleteItem(item.id)}>❌</button></li>
+          <li key={item.id}>{item.value} 
+          
+           <button onClick={() => deleteItem(item.id)}>
+            <img width="20px" src="https://uxwing.com/wp-content/themes/uxwing/download/user-interface/red-trash-can-icon.png" alt="" />
+           </button>
+           </li>
         )
         }) }
         
@@ -56,6 +75,7 @@ function deleteItem(id){
       </ul>
     </div>
      </div>
+   </div>
      </div>
 
 
