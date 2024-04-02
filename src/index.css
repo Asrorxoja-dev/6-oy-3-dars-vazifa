@@ -12,6 +12,8 @@
 
 body{
   font-family: sans-serif;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgb(6, 4, 40) 100%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%);
 }
 
 .block{
@@ -21,6 +23,7 @@ body{
 }
 
 .block h1{
+  color:aliceblue;
   margin-top: 40px;
   margin-left: -245px;
   margin-bottom: 50px;
@@ -51,27 +54,32 @@ left: 517px;
 
 }
 
-.table ul{
+
+ ul{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items:center;
+justify-content: space-between;
+
 }
 
-.table ul li{
+ ul li{
+
+  width: 600px;
  margin-left: -350px;
  font-family: sans-serif;
 font-size: 18px;
 display: flex;
 
-justify-content: center;
+justify-content: space-between;
 font-weight: 400;
 margin-bottom: 10px;
-padding: 15px;
+padding: 10px;
 align-items:center;
 letter-spacing: 0em;
 text-align: left;
 background-color: rgb(243, 243, 243);
-max-width:  860px;
+
 border-radius:10px;
 
 }
@@ -90,44 +98,26 @@ border-radius:10px;
   left: -80px;
 }
 
+.deleteButton{
+  border:none;
+  cursor: pointer;
 
-.table li button{
-margin-left: 500px;
-/* align-items:center;
-text-align: center; */
-border:none;
-transition: 1s;
-cursor: pointer;
 }
-
 
 
 
 .todo-wrapper{
   display: flex;
   justify-content: center;
-}
-
-.todo-wrapper .Side-bar{
-  padding: 10px;
-  margin-top: 100px;
-margin-left: -100px;
-
  
 }
 
-.todo-wrapper .Side-bar ul li{
+
+
+
+
+.block h1{
+  margin: 0 auto ;
+  margin-top: 40px;
   margin-bottom: 50px;
-margin-right: 80px;
-cursor: pointer;
-font-size: 17px;
-}
-
-.line{
- height: 600px;
- opacity:0.5 ;
-}
-
-.todo-wrapper .Side-bar ul li:first-child{
-  color:rgb(224, 37, 37);
 }
